@@ -50,7 +50,8 @@ Configure environment variables:
 - Create a ``.env file in the project root:echo "GOOGLE_API_KEY=your-google-api-key" > .env``
 - echo `` "DATABASE_URL=sqlite:///students.db" >> .env``
 
-Replace your-google-api-key with a valid Google Gemini API key.
+Replace ``your-google-api-key`` with a valid Google Gemini API key.
+
 Alternatively, add to ``~/.bashrc (or ~/.zshrc):nano ~/.bashrc``
 
 Add:export ``GOOGLE_API_KEY="your-google-api-key"``
@@ -70,9 +71,9 @@ Run the Streamlit app:
 
 Access the web interface:
 
-Open your browser and navigate to http://localhost:8501 (or the forwarded URL in GitHub Codespaces).
+- Open your browser and navigate to ``http://localhost:8501 (or the forwarded URL in GitHub Codespaces)``.
 
-Enter a natural language query (e.g., "Show me the grades for student John Doe").
+- Enter a natural language query (e.g., "Show me the grades for student John Doe").
 
 
 The AI assistant will:
@@ -84,27 +85,40 @@ The AI assistant will:
 Sample interaction:
 - Input: "Show me the grades for student John Doe"
 - SQL Generated: SELECT course, grade FROM grades JOIN students ON grades.student_id = students.id WHERE students.name = 'John Doe';
-- 
+  
 Output:
 ``| course    | grade |``
+
 ``|-----------|-------|``
+
 ``| Math 101  | 85    |``
+
 ``| CS 201    | 92    |``
 
 
 
 Project Structure
 
-``intelligent-ai-assistant/
-``├── app.py               # Streamlit app for the web interface
-``├── agent.py             # AI logic for query-to-SQL conversion
-``├── db.py                # Database connection and query execution
-``├── config.py            # Configuration loading
-``├── init_db.py           # Script to initialize the SQLite database
-``├── .env                 # Environment variables
-``├── requirements.txt     # Python dependencies
-``├── tests/               # Directory for unit tests
-``│   └── test_agent.py    # Unit tests for query conversion
+``intelligent-ai-assistant/``
+
+``├── app.py               # Streamlit app for the web interface``
+
+``├── agent.py             # AI logic for query-to-SQL conversion``
+
+``├── db.py                # Database connection and query execution``
+
+``├── config.py            # Configuration loading``
+
+``├── init_db.py           # Script to initialize the SQLite database``
+
+``├── .env                 # Environment variables``
+
+``├── requirements.txt     # Python dependencies``
+
+``├── tests/               # Directory for unit tests``
+
+``│   └── test_agent.py    # Unit tests for query conversion``
+
 ``└── README.md            # Project documentation``
 
 - app.py: Streamlit application for the web interface.
