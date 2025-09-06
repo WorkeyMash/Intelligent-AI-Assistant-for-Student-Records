@@ -1,8 +1,8 @@
 # Intelligent-AI-Assistant-for-Student-Records
 
-**Problem Statement
+**Problem Statement**
 
-Educational institutions manage vast amounts of student data, such as grades, enrollment details, and contact information, typically stored in relational databases. Querying this data often requires technical knowledge of SQL, which can be a barrier for non-technical users like administrators or educators. Existing interfaces may be rigid or complex, leading to inefficiencies and errors. There is a need for an intuitive, user-friendly system that allows users to retrieve student records using plain English, without requiring knowledge of database query languages.
+- Educational institutions manage vast amounts of student data, such as grades, enrollment details, and contact information, typically stored in relational databases. Querying this data often requires technical knowledge of SQL, which can be a barrier for non-technical users like administrators or educators. Existing interfaces may be rigid or complex, leading to inefficiencies and errors. There is a need for an intuitive, user-friendly system that allows users to retrieve student records using plain English, without requiring knowledge of database query languages.
 The Intelligent AI Assistant solves this problem by enabling users to query student records in natural language (e.g., "Show me the grades for student John Doe"). The system uses AI to translate these queries into SQL, execute them against a database, and present the results in a clear, readable format, streamlining data access for educational institutions.
 
 **Overview
