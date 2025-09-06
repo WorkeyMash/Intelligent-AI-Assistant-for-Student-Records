@@ -101,25 +101,25 @@ Project Structure
 
 ``intelligent-ai-assistant/``
 
-``├── app.py               # Streamlit app for the web interface
+``├── app.py``               # Streamlit app for the web interface
 
-``├── agent.py             # AI logic for query-to-SQL conversion`
+``├── agent.py ``           # AI logic for query-to-SQL conversion`
 
-``├── db.py                # Database connection and query execution`
+``├── db.py  ``              # Database connection and query execution`
 
-``├── config.py            # Configuration loading`
+``├── config.py ``           # Configuration loading`
 
-``├── init_db.py           # Script to initialize the SQLite database`
+``├── init_db.py  ``         # Script to initialize the SQLite database`
 
-``├── .env                 # Environment variables`
+``├── .env   ``              # Environment variables`
 
-``├── requirements.txt     # Python dependencies`
+``├── requirements.txt ``    # Python dependencies`
 
-``├── tests/               # Directory for unit tests`
+``├── tests/   ``            # Directory for unit tests`
 
-``│   └── test_agent.py    # Unit tests for query conversion``
+``│   └── test_agent.py ``   # Unit tests for query conversion
 
-``└── README.md            # Project documentation``
+``└── README.md ``           # Project documentation
 
 - app.py: Streamlit application for the web interface.
 - agent.py: Logic for processing queries and generating SQL using Google’s Gemini API.
