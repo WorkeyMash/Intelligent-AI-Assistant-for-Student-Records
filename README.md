@@ -47,14 +47,14 @@ Initialize the database:
 
 Configure environment variables:
 
-- Create a .env file in the project root:echo "GOOGLE_API_KEY=your-google-api-key" > .env
-- echo "DATABASE_URL=sqlite:///students.db" >> .env
+- Create a ``.env file in the project root:echo "GOOGLE_API_KEY=your-google-api-key" > .env``
+- echo `` "DATABASE_URL=sqlite:///students.db" >> .env``
 
 Replace your-google-api-key with a valid Google Gemini API key.
-Alternatively, add to ~/.bashrc (or ~/.zshrc):nano ~/.bashrc
+Alternatively, add to ``~/.bashrc (or ~/.zshrc):nano ~/.bashrc``
 
-Add:export GOOGLE_API_KEY="your-google-api-key"
-export DATABASE_URL="sqlite:///students.db"
+Add:export ``GOOGLE_API_KEY="your-google-api-key"``
+export ``DATABASE_URL="sqlite:///students.db"``
 
 Apply changes:source ~/.bashrc
 
@@ -87,11 +87,8 @@ Sample interaction:
 - 
 Output:
 ``| course    | grade |``
-
 ``|-----------|-------|``
-
 ``| Math 101  | 85    |``
-
 ``| CS 201    | 92    |``
 
 
@@ -99,16 +96,16 @@ Output:
 Project Structure
 
 ``intelligent-ai-assistant/
-├── app.py               # Streamlit app for the web interface
-├── agent.py             # AI logic for query-to-SQL conversion
-├── db.py                # Database connection and query execution
-├── config.py            # Configuration loading
-├── init_db.py           # Script to initialize the SQLite database
-├── .env                 # Environment variables
-├── requirements.txt     # Python dependencies
-├── tests/               # Directory for unit tests
-│   └── test_agent.py    # Unit tests for query conversion
-└── README.md            # Project documentation``
+``├── app.py               # Streamlit app for the web interface
+``├── agent.py             # AI logic for query-to-SQL conversion
+``├── db.py                # Database connection and query execution
+``├── config.py            # Configuration loading
+``├── init_db.py           # Script to initialize the SQLite database
+``├── .env                 # Environment variables
+``├── requirements.txt     # Python dependencies
+``├── tests/               # Directory for unit tests
+``│   └── test_agent.py    # Unit tests for query conversion
+``└── README.md            # Project documentation``
 
 - app.py: Streamlit application for the web interface.
 - agent.py: Logic for processing queries and generating SQL using Google’s Gemini API.
