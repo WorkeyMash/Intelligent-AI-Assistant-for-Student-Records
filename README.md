@@ -65,29 +65,34 @@ Apply changes:source ~/.bashrc
 Usage
 
 Run the Streamlit app:
-streamlit run app.py
+``streamlit run app.py``
 
 
 Access the web interface:
 
 Open your browser and navigate to http://localhost:8501 (or the forwarded URL in GitHub Codespaces).
+
 Enter a natural language query (e.g., "Show me the grades for student John Doe").
 
 
 The AI assistant will:
 
-Use Google’s Gemini API to generate SQL.
-Execute the query against the SQLite database.
-Display results in a table via Streamlit.
+- Use Google’s Gemini API to generate SQL.
+- Execute the query against the SQLite database.
+- Display results in a table via Streamlit.
 
 Sample interaction:
-Input: "Show me the grades for student John Doe"
-SQL Generated: SELECT course, grade FROM grades JOIN students ON grades.student_id = students.id WHERE students.name = 'John Doe';
+- Input: "Show me the grades for student John Doe"
+- SQL Generated: SELECT course, grade FROM grades JOIN students ON grades.student_id = students.id WHERE students.name = 'John Doe';
+- 
 Output:
-``| course    | grade |
-|-----------|-------|
-| Math 101  | 85    |
-| CS 201    | 92    |``
+``| course    | grade |``
+
+``|-----------|-------|``
+
+``| Math 101  | 85    |``
+
+``| CS 201    | 92    |``
 
 
 
@@ -105,15 +110,15 @@ Project Structure
 │   └── test_agent.py    # Unit tests for query conversion
 └── README.md            # Project documentation``
 
-app.py: Streamlit application for the web interface.
-agent.py: Logic for processing queries and generating SQL using Google’s Gemini API.
-db.py: SQLite database connection and query execution utilities.
-init_db.py: Script to initialize the database with sample data.
-config.py: Configuration for API keys and database settings.
-.env: Environment variables (loaded via python-dotenv).
-tests/: Unit tests for query conversion.
-requirements.txt: Python dependencies.
-.gitignore: Excludes sensitive files (e.g., .env, students.db).
+- app.py: Streamlit application for the web interface.
+- agent.py: Logic for processing queries and generating SQL using Google’s Gemini API.
+- db.py: SQLite database connection and query execution utilities.
+- init_db.py: Script to initialize the database with sample data.
+- config.py: Configuration for API keys and database settings.
+- .env: Environment variables (loaded via python-dotenv).
+- tests/: Unit tests for query conversion.
+- requirements.txt: Python dependencies.
+- .gitignore: Excludes sensitive files (e.g., .env, students.db).
 
 Technologies Used
 
